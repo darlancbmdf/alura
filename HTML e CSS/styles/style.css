@@ -119,8 +119,7 @@ body{
   font-weight: 400;
   font-family: var(--font-secundaria);
   font-size: 1.5rem;
-  bottom: 0;
-  width: 100%;
+  width: auto;
 }
 
 @media (max-width: 1200px){
