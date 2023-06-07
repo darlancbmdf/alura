@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+	}
+
+	const date = new Date();
+	const ano = date.getFullYear();
+
+	let anos = [1965, 1996, 1976];
+	let pessoas = ['Flávio', 'Joaquim', 'Barney'];
+	let soma = 0;
+
+	for(let i = 0; i < pessoas.length; i++){
+		let idadePessoa = ano - anos[i];
+
+		document.write(pessoas[i] + " tem " + idadePessoa + " anos." );
+		pulaLinha();
+
+		soma += idadePessoa;
+	}
+
+	let media = soma/pessoas.length;
+
+	document.write("A média das idades é " + Math.round(media));
+
+</script>
