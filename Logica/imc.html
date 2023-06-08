@@ -11,9 +11,8 @@
 		pulaLinha(); // chamada da function dentro de uma function
 	}
 
-	function calculaImc(peso, altura){
-		let imc = peso / (altura * altura);
-		return imc;
+	function calculaImc(peso, altura){  // function que calcula o imc
+		return peso / (altura * altura);
 	}
 
 	let pessoas = ["Flávio", "João", "Maria"];
@@ -22,7 +21,6 @@
 
 	for (let i = 0; i < pessoas.length; i++){
 		let imc = calculaImc(pesos[i], alturas[i]);
-
 		mostra('O imc do ' + pessoas[i] + ' é ' + imc);
 	}
 
