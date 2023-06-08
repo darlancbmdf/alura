@@ -1,12 +1,18 @@
 <meta charset="UTF-8">
 
 <script>
-	function pulaLinha(){
+	
+	function pulaLinha(){  // function sem parametro
 		document.write("<br>");
 	}
 
-	const date = new Date();
-	const ano = date.getFullYear();
+	function mostra(frase){  // function com parametro
+		document.write(frase);
+		pulaLinha(); // chamada da function dentro de uma function
+	}
+
+	const date = new Date(); 
+	const ano = date.getFullYear(); // pega o ano no formato completo. Ex. 2023
 
 	let anos = [1965, 1996, 1976];
 	let pessoas = ['Flávio', 'Joaquim', 'Barney'];
@@ -14,15 +20,11 @@
 
 	for(let i = 0; i < pessoas.length; i++){
 		let idadePessoa = ano - anos[i];
-
-		document.write(pessoas[i] + " tem " + idadePessoa + " anos." );
-		pulaLinha();
-
+		mostra(pessoas[i] + " tem " + idadePessoa + " anos.");
 		soma += idadePessoa;
 	}
 
-	let media = soma/pessoas.length;
-
-	document.write("A média das idades é " + Math.round(media));
+	let media = soma/pessoas.length; // cria a variavel media já fazendo o calculo da media
+	mostra("A média das idades é " + Math.round(media)); // utilizando uma funcao matematica de arredondamento
 
 </script>
