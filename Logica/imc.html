@@ -15,13 +15,21 @@
 		return peso / (altura * altura);
 	}
 
-	let pessoas = ["Flávio", "João", "Maria"];
+	/**let pessoas = ["Flávio", "João", "Maria"];
 	let pesos = [73, 68, 93];
 	let alturas = [1.71, 1.72, 1.66];
 
 	for (let i = 0; i < pessoas.length; i++){
 		let imc = calculaImc(pesos[i], alturas[i]);
 		mostra('O imc do ' + pessoas[i] + ' é ' + imc);
-	}
+	}*/
+
+	let nomePessoa = prompt('Informe o seu nome:');
+	let alturaInformada = prompt(nomePessoa + ', informe sua altura:');
+	let pesoInformado = prompt(nomePessoa + ', informe o seu peso:');
+
+	let imc = calculaImc(pesoInformado, alturaInformada);
+
+	document.write(nomePessoa + ", o seu imc é: " + imc);
 
 </script>
