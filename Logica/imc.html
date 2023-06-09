@@ -30,6 +30,30 @@
 
 	let imc = calculaImc(pesoInformado, alturaInformada);
 
-	document.write(nomePessoa + ", o seu imc é: " + imc);
+	mostra(nomePessoa + ", o seu imc é: " + imc);
+
+	if(imc < 18.5){
+		mostra(nomePessoa + ', seu IMC está classificado como "MAGREZA"');
+	}
+
+	if(imc >= 18.5 && imc < 25){
+		mostra(nomePessoa + ', seu IMC está classificado como "NORMAL"');
+	}
+
+	if(imc >= 25 && imc < 30 ){
+		mostra(nomePessoa + ', seu IMC está classificado como "SOBREPESO"');
+	}
+
+	if(imc >= 30 && imc < 35 ){
+		mostra(nomePessoa + ', seu IMC está classificado como "OBESIDADE GRAU I"');
+	}
+
+	if(imc >= 35 && imc < 40 ){
+		mostra(nomePessoa + ', seu IMC está classificado como "OBESIDADE GRAU II"');
+	}
+
+	if( imc > 40){
+		mostra(nomePessoa + ', seu IMC está classificado como "OBESIDADE GRAU III"');
+	}
 
 </script>
