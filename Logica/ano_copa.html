@@ -1,0 +1,24 @@
+<meta charset="UTF-8" />
+
+<script>
+  function pulaLinha() {
+    // function sem parametro
+    document.write('<br>')
+  }
+
+  function mostra(frase) {
+    // function com parametro
+    document.write(frase)
+    pulaLinha() // chamada da function dentro de uma function
+  }
+
+  const date = new Date()
+  const ano = date.getFullYear()
+
+  let anoCopa = 1930
+
+  while (anoCopa <= ano) {
+    mostra('Teve copa no ano ' + anoCopa)
+    anoCopa = anoCopa + 4
+  }
+</script>

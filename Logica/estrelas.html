@@ -1,0 +1,21 @@
+<meta charset="UTF-8" />
+
+<script>
+  function pulaLinha() {
+    // function sem parametro
+    document.write('<br>')
+  }
+
+  function mostra(frase) {
+    // function com parametro
+    document.write(frase)
+    pulaLinha() // chamada da function dentro de uma function
+  }
+
+  for (let linha = 0; linha < 3; linha++) {
+    for (let coluna = 0; coluna < 10; coluna++) {
+      document.write('*')
+    }
+    pulaLinha()
+  }
+</script>

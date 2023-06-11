@@ -1,0 +1,22 @@
+<meta charset="UTF-8" />
+
+<script>
+  function pulaLinha() {
+    // function sem parametro
+    document.write('<br>')
+  }
+
+  function mostra(frase) {
+    // function com parametro
+    document.write(frase)
+    pulaLinha() // chamada da function dentro de uma function
+  }
+
+  let numTabuada = parseInt(
+    prompt('Informe o número o qual deseja saber a tabuada:')
+  )
+
+  for (let i = 0; i <= 10; i++) {
+    mostra(numTabuada + ' x ' + i + ' = ' + numTabuada * i)
+  }
+</script>

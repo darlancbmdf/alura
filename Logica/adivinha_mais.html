@@ -1,0 +1,21 @@
+<meta charset="UTF-8" />
+<input />
+<button>Compare com o meu segredo</button>
+<script>
+  let segredos = [5, 7, 8];
+  let input = document.querySelector('input')
+  input.focus()
+
+  function verifica() {
+    if (input.value == segredo) {
+      alert('Você acertou!')
+    } else {
+      alert('Você errou!')
+    }
+    input.value = ''
+    input.focus()
+  }
+
+  let button = document.querySelector('button')
+  button.onclick = verifica
+</script>

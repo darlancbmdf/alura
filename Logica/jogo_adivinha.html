@@ -1,23 +1,29 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 
 <script>
-	
-	function pulaLinha(){  // function sem parametro
-		document.write("<br>");
-	}
+  function pulaLinha() {
+    // function sem parametro
+    document.write('<br>')
+  }
 
-	function mostra(frase){  // function com parametro
-		document.write(frase);
-		pulaLinha(); // chamada da function dentro de uma function
-	}
+  function mostra(frase) {
+    // function com parametro
+    document.write(frase)
+    pulaLinha() // chamada da function dentro de uma function
+  }
 
-	let numeroPensado = Math.round(Math.random() * 10); // Math.random gera um numero aleatório.
-	let chute = parseInt(prompt('Digite seu chute!'));
+  let numeroPensado = Math.round(Math.random() * 10)
+  let numeroChances = 3
+  let tentativas = 0
 
-	if (chute == numeroPensado){
-		mostra('Você acertou');
-	} else {
-		mostra('Você errou o número pensado foi: ' + numeroPensado);
-	}
-	
+  while (tentativas < numeroChances) {
+    let chute = parseInt(prompt('Digite um chute:'))
+    if (chute == numeroPensado) {
+      mostra('Você acertou!')
+      break
+    } else {
+      mostra('Você errou!')
+    }
+    tentativas++
+  }
 </script>

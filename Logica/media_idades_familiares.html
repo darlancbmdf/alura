@@ -1,0 +1,28 @@
+<meta charset="UTF-8" />
+
+<script>
+  function pulaLinha() {
+    // function sem parametro
+    document.write('<br>')
+  }
+
+  function mostra(frase) {
+    // function com parametro
+    document.write(frase)
+    pulaLinha() // chamada da function dentro de uma function
+  }
+
+  let qtdFamiliares = parseInt(prompt('Qual a quantidade de familiares?'));
+  let totalIdades = 0;
+
+  for(let i = 0; i < qtdFamiliares ; i++){
+    totalIdades = parseInt(prompt('Informe a idade do familiar:'));
+    totalIdades += totalIdades;
+  }
+  
+  let media = totalIdades / qtdFamiliares;
+
+  mostra('A média das idades é ' + media);
+
+
+</script>
