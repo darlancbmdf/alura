@@ -1,12 +1,12 @@
 class Loteria:
 
-    def __init__(self, nome, concurso, dezenas = []):
+    def __init__(self, nome, concurso, dezenas):
         self.concurso = concurso
         self.dezenas = dezenas
         self.nome = nome
 
     def mostra_concurso(self):
-        print(f'concurso:{self.concurso} dezenas{self.dezenas}')
+        print(f'concurso:{self.concurso} dezenas:{self.dezenas}')
 
     def verifica_acertos(self, dezenas_jogadas):
         dezenas_apuradas = self.dezenas
@@ -21,7 +21,8 @@ class Loteria:
         acertos = self.verifica_acertos(dezenas)
         if self.nome == 'lotofacil':
             if acertos >= 11:
-                print(f'PREMIADO! ({self.concurso}) {acertos} acertos :D')
+                
+                print(f'\nPREMIADO! ({self.concurso}) {acertos} acertos :D\n')
             else:
                 print(f'NÃO PREMIADO! ({self.concurso}) {acertos} acertos :(')
 
@@ -35,6 +36,8 @@ conc2836 = Loteria('lotofacil', 2836, [1,2,3,4,7,9,12,14,15,17,18,20,21,22,23])
 conc2837 = Loteria('lotofacil', 2837, [1,2,5,6,8,10,12,17,18,19,20,21,22,24,25])
 
 dezenas_jogadas = [1,3,5,7,8,9,10,11,13,14,18,20,21,22,24,25]
+
+conc2830.mostra_concurso()
 
 conc2830.verifica_lotofacil(dezenas_jogadas)
 conc2831.verifica_lotofacil(dezenas_jogadas)

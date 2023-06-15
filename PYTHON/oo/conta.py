@@ -24,9 +24,15 @@ class Conta:
         """ metodo get_titular"""
         return self.__titular
 
-    def get_limite(self):
+    @property
+    def limite(self):
         """ metodo get_limite"""
         return self.__limite
+
+    @limite.setter
+    def limite(self, limite):
+        self.__limite = limite
+        print('Limite alterado!')
 
     def depositar(self, valor):
         """ metodo depositar """
