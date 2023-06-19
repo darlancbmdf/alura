@@ -78,4 +78,3 @@ print(len(playlist_fim_de_semana))
 
 for programa in playlist_fim_de_semana:
     print(programa)
-""" 00053-00131295/2023-07 """
