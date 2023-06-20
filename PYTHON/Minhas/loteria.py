@@ -46,7 +46,7 @@ class Loteria:
         if self.__nome == 'lotofacil':
             if acertos >= 11:
 
-                print(f'\nPREMIADO! ({self.__concurso}) {acertos} acertos :D\n')
+                print(f'PREMIADO! ({self.__concurso}) {acertos} acertos :D\n')
             else:
                 print(f'NÃO PREMIADO! ({self.__concurso}) {acertos} acertos :(')
 
@@ -59,6 +59,9 @@ conc2835 = Loteria('lotofacil', 2835, [2,4,6,7,8,9,10,12,13,14,15,16,21,22,25])
 conc2836 = Loteria('lotofacil', 2836, [1,2,3,4,7,9,12,14,15,17,18,20,21,22,23])
 conc2837 = Loteria('lotofacil', 2837, [1,2,5,6,8,10,12,17,18,19,20,21,22,24,25])
 conc2838 = Loteria('lotofacil', 2838, [3,4,5,6,7,8,10,11,12,13,15,16,21,23,25])
+conc2839 = Loteria('lotofacil', 2839, [1,3,4,5,6,10,12,13,15,16,17,18,20,21,24])
+conc2840 = Loteria('lotofacil', 2840, [1,2,4,5,6,7,10,11,13,14,16,20,22,24,25])
+conc2841 = Loteria('lotofacil', 2841, [3,5,6,7,8,9,14,17,18,19,20,21,23,24,25])
 
 dezenas_jogadas = [1,3,5,7,8,9,10,11,13,14,18,20,21,22,24,25]
 
@@ -71,3 +74,6 @@ conc2835.verifica_lotofacil(dezenas_jogadas)
 conc2836.verifica_lotofacil(dezenas_jogadas)
 conc2837.verifica_lotofacil(dezenas_jogadas)
 conc2838.verifica_lotofacil(dezenas_jogadas)
+conc2839.verifica_lotofacil(dezenas_jogadas)
+conc2840.verifica_lotofacil(dezenas_jogadas)
+conc2841.verifica_lotofacil(dezenas_jogadas)
