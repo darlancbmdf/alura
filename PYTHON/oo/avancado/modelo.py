@@ -22,6 +22,7 @@ class Programa:
     def __str__(self):
         return f'{self._nome} - {self.ano} - {self._likes}'
 
+
 class Filme(Programa):
     def __init__(self, nome, ano, duracao):
         super().__init__(nome, ano)
@@ -30,6 +31,7 @@ class Filme(Programa):
     def __str__(self):
         return f'{self._nome} - {self.ano} - {self.duracao} min - {self._likes} likes'
 
+
 class Serie(Programa):
     def __init__(self, nome, ano, temporadas):
         super().__init__(nome, ano)
@@ -37,6 +39,7 @@ class Serie(Programa):
 
     def __str__(self):
         return f'{self._nome} - {self.ano} - {self.temporadas} temporadas - {self._likes} likes'
+
 
 class Playlist:
     def __init__(self, nome, programas):
@@ -52,6 +55,13 @@ class Playlist:
 
     def __len__(self):
         return len(self._programas)
+
+    def __add__(self, novo):
+        if isinstance(novo, Playlist):
+            nova_lista = self._programas + novo._programas
+            return nova_lista
+        else:
+            raise TypeError("Operação de adição não suportada.")
 
 
 vingadores = Filme('vingadores - guerra infinita', 2018, 160)
@@ -73,6 +83,16 @@ atlanta.dar_likes()
 filmes_e_series = [vingadores, atlanta, demolidor, tmep]
 
 playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
+
+jhon_wick = Filme('jhon wick', 2018, 180)
+jhon_wick.dar_likes()
+jhon_wick.dar_likes()
+jhon_wick.dar_likes()
+
+#adição de item a playlist já criada 
+filme_add = [jhon_wick]
+filme_add_playlist = Playlist('jhon wick', filme_add)
+playlist_fim_de_semana = playlist_fim_de_semana + filme_add_playlist
 
 print(len(playlist_fim_de_semana))
 
