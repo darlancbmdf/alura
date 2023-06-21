@@ -11,5 +11,3 @@ busca = padrao.search(endereco) # Match
 if busca:
     cep = busca.group()
     print(cep)
-
-
