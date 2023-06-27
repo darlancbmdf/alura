@@ -1,5 +1,3 @@
-from validate_docbr import CPF
-
 class Cpf:
     def __init__(self, documento):
         documento = str(documento)
