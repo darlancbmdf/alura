@@ -98,3 +98,12 @@ dkms.conf
 # Support for Project snippet scope
 
 # End of https://www.toptal.com/developers/gitignore/api/c,c++,visualstudiocode
+.idea/*
+venv/*
+dist/*
+build/*
+*/__pycache__/*
+site/*
+# Egg metadata
+*.egg-info
+.coverage
