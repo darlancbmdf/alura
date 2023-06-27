@@ -96,8 +96,6 @@ dkms.conf
 .ionide
 
 # Support for Project snippet scope
-
-# End of https://www.toptal.com/developers/gitignore/api/c,c++,visualstudiocode
 .idea/*
 venv/*
 dist/*
@@ -107,3 +105,5 @@ site/*
 # Egg metadata
 *.egg-info
 .coverage
+
+# End of https://www.toptal.com/developers/gitignore/api/c,c++,visualstudiocode
