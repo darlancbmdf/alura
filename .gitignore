@@ -105,5 +105,5 @@ site/*
 # Egg metadata
 *.egg-info
 .coverage
-.pyc
+*.pyc
 # End of https://www.toptal.com/developers/gitignore/api/c,c++,visualstudiocode
